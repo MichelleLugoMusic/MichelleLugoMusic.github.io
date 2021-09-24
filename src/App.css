@@ -1,0 +1,33 @@
+@font-face {
+  font-family: 'Trattatello';
+  src: local('Trattatello'), url('./Trattatello.ttf') format('truetype')
+}
+
+@font-face {
+  font-family: 'Andale_Mono';
+  src: local('andale_mono'), url('./andale_mono.ttf') format('truetype')
+}
+
+@font-face {
+  font-family: 'Yaldevi';
+  src: local('Yaldevi-Regular'), url('./Yaldevi-Regular.ttf') format('truetype')
+}
+
+@font-face {
+  font-family: 'Merienda';
+  src: local('Merienda-Regular'), url('./Merienda-Regular.ttf') format('truetype')
+}
+/* 
+@font-face {
+  font-family: 'Yaldevi';
+  src: url('https://fonts.googleapis.com/css2?family=Lobster&display=swap') format('truetype');
+}
+
+@font-face {
+  font-family: 'Merienda';
+  src: url('https://fonts.googleapis.com/css2?family=Lobster&display=swap') format('truetype');
+} */
+
+@import url('https://fonts.googleapis.com/css2?family=Yaldevi&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Merienda&display=swap');

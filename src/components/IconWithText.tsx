@@ -7,7 +7,7 @@ type IconWithTextProps = {
 };
 
 const IconWithText = ({ icon, text, ...props }: IconWithTextProps) => (
-  <Stack direction="row" color="white" {...props}>
+  <Stack direction="row" color="white" alignItems="center" {...props}>
     {icon}
     <Typography fontFamily="Yaldevi" flexDirection="row">
       {text}

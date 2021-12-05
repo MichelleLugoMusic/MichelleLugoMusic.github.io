@@ -8,6 +8,7 @@ const Home = () => (
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
+        marginTop: "15%",
       }}
     >
       <div

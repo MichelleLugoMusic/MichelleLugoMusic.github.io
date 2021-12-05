@@ -1,11 +1,12 @@
-import React from "react";
 import "./App.css";
-import background from "./michellelugomusic_widecrop.jpg";
-
-import { Grid, Typography, Stack } from "@mui/material";
+import background from "./assets/images/michellelugomusic_widecrop.jpg";
+import { Grid, Typography, Stack, Avatar } from "@mui/material";
 import {
   Mail as MailIcon,
   LocationOn as LocationIcon,
+  Facebook as FacebookIcon,
+  YouTube as YouTubeIcon,
+  Instagram as InstagramIcon,
 } from "@mui/icons-material";
 
 const backgroundStyle = {
@@ -30,16 +31,27 @@ const titleFontStyle = {
 type IconWithTextProps = {
   icon: JSX.Element;
   text: string;
+  marginRight?: number | string;
 };
 
-const IconWithText = ({ icon, text }: IconWithTextProps) => (
-  <Stack direction="row" color="white">
+const IconWithText = ({ icon, text, ...props }: IconWithTextProps) => (
+  <Stack direction="row" color="white" {...props}>
     {icon}
     <Typography fontFamily="Yaldevi" flexDirection="row">
       {text}
     </Typography>
   </Stack>
 );
+
+type SocialMediaButtonProps = { icon: JSX.Element; link?: string };
+
+const SocialMediaButton = ({ icon, link }: SocialMediaButtonProps) => {
+  return (
+    <Avatar sx={{ bgcolor: "common.grayLighter", marginRight: 3 }}>
+      {icon}
+    </Avatar>
+  );
+};
 
 function App() {
   return (
@@ -58,18 +70,27 @@ function App() {
     >
       <Grid
         container
-        sx={{ backgroundColor: { xs: "green", lg: "purple" } }}
-        justifyContent="left"
+        sx={{ backgroundColor: "common.gray" }}
+        justifyContent="space-around"
+        alignItems="center"
         p={2}
       >
-        <IconWithText
-          icon={<LocationIcon sx={{ marginRight: 1 }} />}
-          text="Boston, US"
-        />
-        <IconWithText
-          icon={<MailIcon sx={{ marginRight: 1 }} />}
-          text="michellelugomusic@gmail.com"
-        />
+        <Stack direction="row">
+          <IconWithText
+            icon={<LocationIcon sx={{ marginRight: 1 }} />}
+            text="Boston, US"
+            marginRight={5}
+          />
+          <IconWithText
+            icon={<MailIcon sx={{ marginRight: 1 }} />}
+            text="michellelugomusic@gmail.com"
+          />
+        </Stack>
+        <Stack direction="row">
+          <SocialMediaButton icon={<InstagramIcon />} />
+          <SocialMediaButton icon={<FacebookIcon />} />
+          <SocialMediaButton icon={<YouTubeIcon />} />
+        </Stack>
       </Grid>
       <div
         style={{
@@ -130,7 +151,6 @@ function App() {
           display: "flex",
           alignItems: "flex-start",
           justifyContent: "center",
-          backgroundColor: "red",
         }}
       >
         <div

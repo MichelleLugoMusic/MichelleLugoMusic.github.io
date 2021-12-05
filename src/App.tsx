@@ -8,8 +8,6 @@ import {
   LocationOn as LocationIcon,
 } from "@mui/icons-material";
 
-// michellelugomusic@gmail.com
-
 const backgroundStyle = {
   backgroundImage: `url(${background})`,
   backgroundSize: "auto 100%",
@@ -65,8 +63,12 @@ function App() {
         p={2}
       >
         <IconWithText
-          icon={<MailIcon sx={{ marginRight: 1 }} />}
+          icon={<LocationIcon sx={{ marginRight: 1 }} />}
           text="Boston, US"
+        />
+        <IconWithText
+          icon={<MailIcon sx={{ marginRight: 1 }} />}
+          text="michellelugomusic@gmail.com"
         />
       </Grid>
       <div
@@ -108,7 +110,6 @@ function App() {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          // backgroundColor: "blue",
         }}
       >
         <div

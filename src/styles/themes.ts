@@ -6,7 +6,8 @@ declare module "@mui/material/styles/createPalette" {
 }
 
 const colors = {
-  gray: "#5e6687aa",
+  lavender: "#5e6687aa",
+  dark_lavender: "#5E6687",
   grayLighter: "rgba(255, 255, 255, 0.10)",
 };
 

@@ -40,7 +40,7 @@ const Header = () => {
     <Grid>
       <Grid
         container
-        sx={{ backgroundColor: "common.gray" }}
+        sx={{ backgroundColor: "common.lavender" }}
         justifyContent="space-around"
         alignItems="center"
         p={1}
@@ -57,9 +57,21 @@ const Header = () => {
           />
         </Stack>
         <Stack direction="row">
-          <SocialMediaButton icon={<InstagramIcon />} />
-          <SocialMediaButton icon={<FacebookIcon />} />
-          <SocialMediaButton icon={<YouTubeIcon />} />
+          <SocialMediaButton
+            icon={<InstagramIcon />}
+            hoverColor="#cd42e7"
+            link="https://www.instagram.com/michellelugomusic/"
+          />
+          <SocialMediaButton
+            icon={<FacebookIcon />}
+            hoverColor="#3c5798"
+            link="https://www.facebook.com/BoriPianist/"
+          />
+          <SocialMediaButton
+            icon={<YouTubeIcon />}
+            hoverColor="#cc181e"
+            link="https://www.youtube.com/channel/UC2l5sd_oygx9-e5aCSSs87g"
+          />
         </Stack>
       </Grid>
       <AppBar position="sticky" color="transparent" elevation={0}>

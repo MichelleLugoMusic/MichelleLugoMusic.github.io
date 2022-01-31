@@ -1,5 +1,23 @@
+import { Grid, Typography, Stack } from "@mui/material";
+import background from "../assets/images/michellelugomusic_widecrop.jpg";
+import Header from "../components/Header";
+
 const Home = () => (
-  <>
+  <Grid
+    style={{
+      backgroundImage: `url(${background})`,
+      backgroundSize: "auto 100%",
+      backgroundPosition: "center",
+      width: "100vw",
+      height: "100vh",
+      backgroundRepeat: "no-repeat",
+      backgroundColor: "black",
+    }}
+    display="flex"
+    flexDirection="column"
+  >
+    <Header />
+
     <div
       style={{
         width: "100%",
@@ -35,7 +53,7 @@ const Home = () => (
         Composer | Arranger | Producer
       </div>
     </div>
-  </>
+  </Grid>
 );
 
 export default Home;

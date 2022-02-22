@@ -23,7 +23,16 @@ const titleFontStyle = {
   textDecoration: "none",
   fontFamily: "Yaldevi",
   color: "white",
+  userSelect: "none",
+
   //   fontSize: "3.3vh",
+};
+
+const portfolioOptionsFontStyle = {
+  textDecoration: "none",
+  fontFamily: "Yaldevi",
+  color: "black",
+  userSelect: "none",
 };
 
 const Header = () => {
@@ -86,15 +95,15 @@ const Header = () => {
               Biography
             </Link>
           </Typography>
-          <Typography mr={3} onMouseEnter={handleMouseOver}>
-            <Link
-              to="/portfolio"
-              style={titleFontStyle}
-
-              // onMouse={handleClose}
-            >
-              Portfolio
-            </Link>
+          <Typography
+            mr={3}
+            onMouseEnter={handleMouseOver}
+            style={{
+              cursor: "pointer",
+            }}
+            onClick={handleMouseOver}
+          >
+            <div style={titleFontStyle}>Portfolio</div>
           </Typography>
           <Menu
             // classes={{ paper: classes.menuPaper }} https://v3.mui.com/demos/menus/ change color
@@ -108,12 +117,24 @@ const Header = () => {
               onMouseLeave: handleClose,
             }}
           >
-            <MenuItem onClick={handleClose}>Profile</MenuItem>
-            <MenuItem onClick={handleClose}>My account</MenuItem>
-            <MenuItem onClick={handleClose}>Logout</MenuItem>
+            <MenuItem onClick={handleClose}>
+              <Link to="/film_music" style={portfolioOptionsFontStyle}>
+                Film Music
+              </Link>
+            </MenuItem>
+            <MenuItem onClick={handleClose}>
+              <Link to="/musical_theater" style={portfolioOptionsFontStyle}>
+                Musical Theater
+              </Link>
+            </MenuItem>
+            <MenuItem onClick={handleClose}>
+              <Link to="/video_games" style={portfolioOptionsFontStyle}>
+                Video Games
+              </Link>
+            </MenuItem>
           </Menu>
           <Typography>
-            <Link to="contact" style={titleFontStyle}>
+            <Link to="/contact" style={titleFontStyle}>
               Contact
             </Link>
           </Typography>

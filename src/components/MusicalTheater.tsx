@@ -1,22 +1,24 @@
 import { Grid, Typography, Stack } from "@mui/material";
-import biopic from "../assets/images/cropped_biopic.jpeg";
-import smallbiopic from "../assets/images/profpicsmall.jpeg";
+import biopic from "../assets/images/MusicMenusPic.jpeg";
 import Box from "@mui/material/Box";
-import Header from "../components/Header";
+import Header from "./Header";
 import Link from "@mui/material/Link";
+import ReactPlayer from "react-player";
 
-const Biography = () => (
+export const MusicalTheater = () => (
   <div>
     <Grid
       style={{
         backgroundImage: `url(${biopic})`,
         backgroundBlendMode: "multiply",
-        backgroundSize: "auto 100%",
+        // backgroundSize: "auto 100%",
+        backgroundSize: "cover",
         backgroundPosition: "center",
         width: "100vw",
         height: "90vh",
         backgroundRepeat: "no-repeat",
         backgroundColor: "lightgray",
+        // objectFit: "fill",
       }}
       display="flex"
       flexDirection="column"
@@ -48,10 +50,9 @@ const Biography = () => (
             color: "white",
             fontSize: "12vh",
             lineHeight: "10vh",
-            userSelect: "none",
           }}
         >
-          Biography
+          Musical Theater
         </div>
       </div>
     </Grid>
@@ -76,9 +77,7 @@ const Biography = () => (
           alignItems: "left",
         }}
       >
-        <div style={{ display: "flex" }}>
-          <img src={smallbiopic} />
-        </div>
+        <div style={{ display: "flex" }}></div>
         <Typography
           component="div"
           sx={{
@@ -86,7 +85,6 @@ const Biography = () => (
             color: "white",
           }}
         >
-          <br></br>
           <Box
             sx={{
               fontWeight: "bold",
@@ -95,9 +93,10 @@ const Biography = () => (
               color: "white",
             }}
           >
-            Hi!
+            Rings come and go
           </Box>
           <br></br>
+
           <Box
             sx={{
               color: "white",
@@ -107,114 +106,129 @@ const Biography = () => (
               lineHeight: "1.6rem",
             }}
           >
-            <a>My name is </a>
-            <Box display="inline" style={{ fontWeight: "bold" }}>
-              Michelle Lugo
-            </Box>
-            , and I'm a Berklee College of Music alumni. My major was
-            composition, arranging and production, and I have a minor in music
-            technology. I was always interested in music since I was four years
-            when I begged my mother to buy me a piano. Since then, I've learned
-            to play classical piano at a conservatory and picked up other
-            instruments like guitar, bass and voice. Through my experience in
-            music, I wanted to start composing and arranging, and I started that
-            at 15. When got into Berklee, I knew that I wanted to expand my
-            creativity to make music and be able to learn different stuff with
-            it like recording, mixing and arranging. I have made arrangements
-            for big shows at Berklee, and I want to have different projects
-            involving creating for other people and for myself.
-          </Box>
-          <br></br>
-          <Box
-            sx={{
-              fontWeight: "bold",
-              fontSize: "1.5rem",
-              lineHeight: "1rem",
-              color: "white",
-            }}
-          >
-            Why do I love Music?
-          </Box>
-          <br></br>
-          <Box
-            sx={{
-              color: "white",
-              fontSize: "1rem",
-              letterSpacing: "0.1rem",
-              wordSpacing: "0.04rem",
-              lineHeight: "1.6rem",
-            }}
-          >
-            I love music because it’s more than just a passion; it’s something
-            that defines me. It brings out my creative side, and it’s something
-            I don’t get tired of. Music makes the world a better place, and I
-            intend to make the world a better place through music.
-          </Box>
-          <br></br>
-          <Box
-            sx={{
-              fontWeight: "bold",
-              fontSize: "1.5rem",
-              lineHeight: "1rem",
-              color: "white",
-            }}
-          >
-            Portfolio…
-          </Box>
-          <br></br>
-          <a href="film_music" style={{ textDecoration: "none" }}>
-            <Box
-              sx={{
-                fontWeight: "bold",
-                fontSize: "1.5rem",
-                lineHeight: "1rem",
-                color: "black",
-                textDecoration: "none",
-                ":hover": { color: "white" },
-              }}
-            >
-              Go to my portfolio
-            </Box>
-          </a>
-          <br></br>
-          <Box
-            sx={{
-              color: "white",
-              fontSize: "1rem",
-              letterSpacing: "0.1rem",
-              wordSpacing: "0.04rem",
-              lineHeight: "1.6rem",
-            }}
-          >
-            {
-              "If you have any questions or would like to get in touch, you can reach me via "
-            }
-            <Link
-              style={{ color: "#9b9b9b", textDecoration: "none" }}
-              href="mailto:cmlugo27@gmail.com"
-            >
-              Email
-            </Link>
-            {", "}
-            <Link
-              style={{ color: "#9b9b9b", textDecoration: "none" }}
-              href="https://www.facebook.com/BoriPianist/"
-            >
-              Facebook
-            </Link>
-            {", or "}
-            <Link
-              style={{ color: "#9b9b9b", textDecoration: "none" }}
-              href="https://www.instagram.com/michellelugomusic/"
-            >
-              Instagram
-            </Link>
-            .
+            I have made a musical, called Bathroom Breakup, of just three songs
+            about two girls on elementary school fighting over a boy. On the
+            first song, she enters the bathroom, and goes through her TikTok
+            only to see her ex making a new TikTok with another girl, which is
+            his new girlfriend. She starts singing of the shock.
           </Box>
         </Typography>
+        <ReactPlayer
+          height={"10vh"}
+          url="https://michellelugomusic.github.io/MichelleLugoMusicResources/Rings-come-and-go.mp3"
+          controls={true}
+        />
+        <br></br>
+
+        <Typography
+          component="div"
+          sx={{
+            fontFamily: "Yaldevi",
+            color: "white",
+          }}
+        >
+          <Box
+            sx={{
+              fontWeight: "bold",
+              fontSize: "1.5rem",
+              lineHeight: "1rem",
+              color: "white",
+            }}
+          >
+            You better duck
+          </Box>
+          <br></br>
+
+          <Box
+            sx={{
+              color: "white",
+              fontSize: "1rem",
+              letterSpacing: "0.1rem",
+              wordSpacing: "0.04rem",
+              lineHeight: "1.6rem",
+            }}
+          >
+            In the second song, she enters the bathroom and they start fighting
+            about him.
+          </Box>
+        </Typography>
+        <ReactPlayer
+          height={"10vh"}
+          url="https://michellelugomusic.github.io/MichelleLugoMusicResources/You-better-duck.mp3"
+          controls={true}
+        />
+        <br></br>
+
+        <Typography
+          component="div"
+          sx={{
+            fontFamily: "Yaldevi",
+            color: "white",
+          }}
+        >
+          <Box
+            sx={{
+              fontWeight: "bold",
+              fontSize: "1.5rem",
+              lineHeight: "1rem",
+              color: "white",
+            }}
+          >
+            Sister for life
+          </Box>
+          <br></br>
+
+          <Box
+            sx={{
+              color: "white",
+              fontSize: "1rem",
+              letterSpacing: "0.1rem",
+              wordSpacing: "0.04rem",
+              lineHeight: "1.6rem",
+            }}
+          >
+            In the third song, another girl enters the bathroom and tells them
+            to not fight over a boy, that there are more important things out
+            there than fight for a boy. And the story ends there.
+          </Box>
+        </Typography>
+        <ReactPlayer
+          height={"10vh"}
+          url="https://michellelugomusic.github.io/MichelleLugoMusicResources/Sister-for-life-2.mp3"
+          controls={true}
+        />
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+
+        <Box
+          sx={{
+            // fontWeight: "bold",
+            fontSize: "1rem",
+            lineHeight: "2rem",
+            color: "white",
+          }}
+        >
+          I have also made a second musical, in which it’s still in progress but
+          you can follow along on our instagram:
+        </Box>
+        <br></br>
+
+        <Link
+          href="mailto:cmlugo27@gmail.com"
+          sx={{
+            fontWeight: "bold",
+            fontSize: "1.4rem",
+            lineHeight: "1rem",
+            color: "black",
+            textDecoration: "none",
+            ":hover": { color: "white" },
+          }}
+        >
+          https://www.instagram.com/willwilsonsavestheworldmusical/
+        </Link>
       </Stack>
     </Grid>
   </div>
 );
-
-export default Biography;

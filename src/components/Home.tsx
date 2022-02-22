@@ -1,5 +1,5 @@
 import { Grid, Typography, Stack } from "@mui/material";
-import background from "../assets/images/michellelugomusic_widecrop.jpg";
+import background from "../assets/images/michellelugomusic_widecrop3.jpeg";
 import Header from "../components/Header";
 
 const Home = () => (
@@ -20,36 +20,37 @@ const Home = () => (
 
     <div
       style={{
-        width: "100%",
-        flex: 0.9,
+        flex: 0.55,
         backgroundColor: "clear",
         display: "flex",
         alignItems: "center",
-        justifyContent: "center",
         marginTop: "15%",
+        flexDirection: "row",
+        justifyContent: "center",
       }}
     >
       <div
         style={{
+          textAlign: "center",
           fontFamily: "Merienda",
           color: "white",
-          fontSize: "12vh",
+          fontSize: "6vw",
           lineHeight: "10vh",
+          marginRight: "3vw",
         }}
       >
         Michelle Lugo
       </div>
-    </div>
-    <div
-      style={{
-        width: "100%",
-        flex: 1.1,
-        display: "flex",
-        alignItems: "flex-start",
-        justifyContent: "center",
-      }}
-    >
-      <div style={{ fontFamily: "Yaldevi", color: "white", fontSize: "4.5vh" }}>
+      <div
+        style={{
+          // alignSelf: "center",
+          // justifyContent: "center",
+          fontFamily: "Yaldevi",
+          color: "white",
+          fontSize: "2vw",
+          marginTop: "1vw",
+        }}
+      >
         Composer | Arranger | Producer
       </div>
     </div>

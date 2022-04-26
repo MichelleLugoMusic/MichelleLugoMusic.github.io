@@ -18,17 +18,16 @@ import {
 } from "@mui/icons-material";
 import { Link } from "react-router-dom";
 import React from "react";
-
-const titleFontStyle = {
+import toml from "toml";
+import HeaderToml from "../configs/Header.toml?raw";
+const titleFontStyle: React.CSSProperties = {
   textDecoration: "none",
   fontFamily: "Yaldevi",
   color: "white",
   userSelect: "none",
-
-  //   fontSize: "3.3vh",
 };
 
-const portfolioOptionsFontStyle = {
+const portfolioOptionsFontStyle: React.CSSProperties = {
   textDecoration: "none",
   fontFamily: "Yaldevi",
   color: "black",
@@ -44,6 +43,7 @@ const Header = () => {
   const handleClose = () => {
     setAnchorEl(null);
   };
+  const headerInfo = toml.parse(HeaderToml);
 
   return (
     <Grid>
@@ -52,13 +52,14 @@ const Header = () => {
         sx={{ backgroundColor: "common.lavender" }}
         justifyContent="space-around"
         alignItems="center"
-        p={1}
+        p={"1.3vh"}
       >
         <Stack direction="row">
           <IconWithText
-            icon={<LocationIcon sx={{ marginRight: 1 }} />}
+            icon={<LocationIcon sx={{ width: "5vw", marginRight: 1 }} />}
             text="Boston, US"
             marginRight={5}
+            width="40%"
           />
           <IconWithText
             icon={<MailIcon sx={{ marginRight: 1 }} />}
@@ -69,30 +70,36 @@ const Header = () => {
           <SocialMediaButton
             icon={<InstagramIcon />}
             hoverColor="#cd42e7"
-            link="https://www.instagram.com/michellelugomusic/"
+            link={headerInfo["contact"]["instagram"]}
           />
           <SocialMediaButton
             icon={<FacebookIcon />}
             hoverColor="#3c5798"
-            link="https://www.facebook.com/BoriPianist/"
+            link={headerInfo["contact"]["facebook"]}
           />
           <SocialMediaButton
             icon={<YouTubeIcon />}
             hoverColor="#cc181e"
-            link="https://www.youtube.com/channel/UC2l5sd_oygx9-e5aCSSs87g"
+            link={headerInfo["contact"]["youtube"]}
           />
         </Stack>
       </Grid>
       <AppBar position="sticky" color="transparent" elevation={0}>
         <Toolbar sx={{ justifyContent: "center" }}>
           <Typography mr={3}>
-            <Link to="/" style={titleFontStyle}>
-              Home
+            <Link
+              to={`/${headerInfo["navigate"]["home"]["subpage"]}`}
+              style={titleFontStyle}
+            >
+              {headerInfo["navigate"]["home"]["text"]}
             </Link>
           </Typography>
           <Typography mr={3}>
-            <Link to="/biography" style={titleFontStyle}>
-              Biography
+            <Link
+              to={`/${headerInfo["navigate"]["biography"]["subpage"]}`}
+              style={titleFontStyle}
+            >
+              {headerInfo["navigate"]["biography"]["text"]}
             </Link>
           </Typography>
           <Typography
@@ -103,10 +110,11 @@ const Header = () => {
             }}
             onClick={handleMouseOver}
           >
-            <div style={titleFontStyle}>Portfolio</div>
+            <div style={titleFontStyle}>
+              {headerInfo["navigate"]["portfolio"]["text"]}
+            </div>
           </Typography>
           <Menu
-            // classes={{ paper: classes.menuPaper }} https://v3.mui.com/demos/menus/ change color
             color="common.gray"
             id="basic-menu"
             anchorEl={anchorEl}
@@ -117,27 +125,21 @@ const Header = () => {
               onMouseLeave: handleClose,
             }}
           >
-            <MenuItem onClick={handleClose}>
-              <Link to="/film_music" style={portfolioOptionsFontStyle}>
-                Film Music
-              </Link>
-            </MenuItem>
-            <MenuItem onClick={handleClose}>
-              <Link to="/musical_theater" style={portfolioOptionsFontStyle}>
-                Musical Theater
-              </Link>
-            </MenuItem>
-            <MenuItem onClick={handleClose}>
-              <Link to="/video_games" style={portfolioOptionsFontStyle}>
-                Video Games
-              </Link>
-            </MenuItem>
+            {headerInfo["navigate"]["portfolio"]["entries"].map(
+              (item: { subpage: string; text: string }) => (
+                <>
+                  <MenuItem onClick={handleClose}>
+                    <Link
+                      to={`/${item["subpage"]}`}
+                      style={portfolioOptionsFontStyle}
+                    >
+                      {item["text"]}
+                    </Link>
+                  </MenuItem>
+                </>
+              )
+            )}
           </Menu>
-          <Typography>
-            <Link to="/contact" style={titleFontStyle}>
-              Contact
-            </Link>
-          </Typography>
         </Toolbar>
       </AppBar>
     </Grid>

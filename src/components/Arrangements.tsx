@@ -1,23 +1,23 @@
 import { Grid } from "@mui/material";
 import Header from "./Header";
 import toml from "toml";
-import FilmMusicToml from "../configs/FilmMusic.toml?raw";
+import ArrangementsToml from "../configs/Arrangements.toml?raw";
 
-const maintitlestyle: React.CSSProperties = {
+const maintitlestyle = {
   fontFamily: "Merienda",
   color: "white",
   fontSize: "6vw",
   lineHeight: "10vh",
 };
 
-export const FilmMusic = () => {
-  const theaterEntries = toml.parse(FilmMusicToml);
-  console.log(theaterEntries);
+export const Arrangements = () => {
+  const arrangementsInfo = toml.parse(ArrangementsToml);
+  console.log(arrangementsInfo);
   return (
     <div>
       <Grid
         style={{
-          backgroundImage: `url(${theaterEntries["main"]["backgroundPic"]})`,
+          backgroundImage: `url(${arrangementsInfo["main"]["backgroundPic"]})`,
           backgroundBlendMode: "multiply",
           backgroundSize: "cover",
           backgroundPosition: "center",
@@ -50,7 +50,7 @@ export const FilmMusic = () => {
             justifyContent: "center",
           }}
         >
-          <div style={maintitlestyle}>{theaterEntries["main"]["title"]}</div>
+          <div style={maintitlestyle}>{arrangementsInfo["main"]["title"]}</div>
         </div>
       </Grid>
     </div>

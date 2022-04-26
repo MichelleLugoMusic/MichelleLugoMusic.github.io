@@ -1,0 +1,70 @@
+[contact]
+location = '''
+Boston, US
+'''
+email = '''
+michellelugomusic@gmail.com
+'''
+instagram = '''
+https://www.instagram.com/michellelugomusic/
+'''
+facebook = '''
+https://www.facebook.com/BoriPianist/
+'''
+youtube = '''
+https://www.youtube.com/channel/UC2l5sd_oygx9-e5aCSSs87g
+'''
+
+[navigate.home]
+subpage = '''
+home
+'''
+text = '''
+Home
+'''
+
+[navigate.biography]
+subpage = '''
+biography
+'''
+text = '''
+Biography
+'''
+
+[navigate.portfolio]
+text = '''
+Portfolio
+'''
+
+[[navigate.portfolio.entries]]
+subpage = '''
+film_music
+'''
+text = '''
+Film Music
+'''
+
+[[navigate.portfolio.entries]]
+subpage = '''
+musical_theater
+'''
+text = '''
+Musical Theater
+'''
+
+[[navigate.portfolio.entries]]
+subpage = '''
+video_games
+'''
+text = '''
+Video Games
+'''
+
+[[navigate.portfolio.entries]]
+subpage = '''
+arrangements
+'''
+text = '''
+Arrangements
+'''
+

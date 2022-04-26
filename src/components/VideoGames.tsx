@@ -1,209 +1,217 @@
 import { Grid, Typography, Stack } from "@mui/material";
-import biopic from "../assets/images/MusicMenusPic.jpeg";
-import GourdGetaway from "../assets/images/GourdGetaway.png";
-import BobTheBomber from "../assets/images/BobTheBomber.png";
-import BoomerangAttack from "../assets/images/BoomerangAttack.png";
-import Catapultimals from "../assets/images/Catapultimals.png";
-import Doughmentum from "../assets/images/Doughmentum.png";
-import IHaveSeenYourDog from "../assets/images/IHaveSeenYourDog.png";
-import LostColors from "../assets/images/LostColors.png";
-import Pancakescape from "../assets/images/Pancakescape.png";
 import PropTypes from "prop-types";
 
 import Box from "@mui/material/Box";
 import Header from "./Header";
 import Link from "@mui/material/Link";
 import ReactPlayer from "react-player";
+import VideoGamesToml from "../configs/VideoGames.toml?raw";
+import toml from "toml";
 
-export const VideoGames = () => (
-  <div>
-    <Grid
-      style={{
-        backgroundImage: `url(${biopic})`,
-        backgroundBlendMode: "multiply",
-        // backgroundSize: "auto 100%",
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        width: "100vw",
-        height: "90vh",
-        backgroundRepeat: "no-repeat",
-        backgroundColor: "lightgray",
-        // objectFit: "fill",
-      }}
-      display="flex"
-      flexDirection="column"
-    >
-      <Header />
-      <div
+const maintitlestyle: React.CSSProperties = {
+  fontFamily: "Merienda",
+  color: "white",
+  fontSize: "6vw",
+  lineHeight: "10vh",
+};
+
+const titleStyle: React.CSSProperties = {
+  fontWeight: "bold",
+  fontSize: "1.8vw",
+  lineHeight: "1rem",
+  color: "white",
+};
+
+const bodyStyle: React.CSSProperties = {
+  color: "white",
+  fontSize: "1.1vw",
+  letterSpacing: "0.1rem",
+  wordSpacing: "0.04rem",
+  lineHeight: "1.6rem",
+  marginTop: "1.5%",
+};
+
+export const VideoGames = () => {
+  const VideoGamesInfo = toml.parse(VideoGamesToml);
+  return (
+    <div>
+      <Grid
         style={{
-          width: "100%",
-          flex: 3,
-          backgroundColor: "clear",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          marginTop: "0%",
+          backgroundImage: `url(${VideoGamesInfo["main"]["backgroundPic"]})`,
+          backgroundBlendMode: "multiply",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          width: "100vw",
+          height: "90vh",
+          backgroundRepeat: "no-repeat",
+          backgroundColor: "lightgray",
         }}
-      ></div>
-      <div
-        style={{
-          width: "100%",
-          flex: 1,
-          display: "flex",
-          alignItems: "flex-start",
-          justifyContent: "center",
-        }}
+        display="flex"
+        flexDirection="column"
       >
+        <Header />
         <div
           style={{
-            fontFamily: "Merienda",
-            color: "white",
-            fontSize: "12vh",
-            lineHeight: "10vh",
+            width: "100%",
+            flex: 3,
+            backgroundColor: "clear",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            marginTop: "0%",
+          }}
+        ></div>
+        <div
+          style={{
+            width: "100%",
+            flex: 1,
+            display: "flex",
+            alignItems: "flex-start",
+            justifyContent: "center",
           }}
         >
-          Video Games
+          <div style={maintitlestyle}>{VideoGamesInfo["main"]["title"]}</div>
         </div>
-      </div>
-    </Grid>
-    <Grid
-      style={{
-        backgroundSize: "auto 100%",
-        backgroundPosition: "center",
-        width: "100vw",
-        height: "140vh",
-        backgroundRepeat: "no-repeat",
-      }}
-      sx={{ backgroundColor: "common.dark_lavender" }}
-      display="flex"
-      flexDirection="column"
-    >
-      <Stack
-        direction="column"
-        sx={{
-          marginTop: "8%",
-          marginLeft: "8.5%",
-          marginRight: "35%",
-          alignItems: "left",
+      </Grid>
+      <Grid
+        style={{
+          backgroundSize: "auto 100%",
+          backgroundPosition: "center",
+          width: "100vw",
+          height: "140vh",
+          backgroundRepeat: "no-repeat",
         }}
+        sx={{ backgroundColor: "common.dark_lavender" }}
+        display="flex"
+        flexDirection="column"
       >
-        <div style={{ display: "flex" }}></div>
-        <Typography
-          component="div"
+        <Stack
+          direction="column"
           sx={{
-            fontFamily: "Yaldevi",
-            color: "white",
-            marginBottom: "10%",
+            marginTop: "8%",
+            marginLeft: "8.5%",
+            marginRight: "35%",
+            alignItems: "left",
           }}
         >
-          <Box
+          <div style={{ display: "flex" }}></div>
+          <Typography
+            component="div"
             sx={{
-              fontWeight: "bold",
-              fontSize: "3rem",
-              lineHeight: "1rem",
+              fontFamily: "Yaldevi",
+              color: "white",
+              marginBottom: "10%",
+            }}
+          >
+            <Box
+              sx={{
+                fontWeight: "bold",
+                fontSize: "3.5vw",
+                lineHeight: "1rem",
+                color: "white",
+              }}
+            >
+              {VideoGamesInfo["main"]["subtitle"]}
+            </Box>
+          </Typography>
+          <Typography
+            component="div"
+            sx={{
+              fontFamily: "Yaldevi",
               color: "white",
             }}
           >
-            Video game compositions
-          </Box>
-        </Typography>
-        <Typography
-          component="div"
-          sx={{
-            fontFamily: "Yaldevi",
-            color: "white",
-          }}
-        >
-          <Box
-            sx={{
-              fontWeight: "bold",
-              fontSize: "1.5rem",
-              lineHeight: "1rem",
-              color: "white",
+            <Box sx={titleStyle}>
+              {VideoGamesInfo["theAudioventure"]["title"]}
+            </Box>
+            <Box sx={bodyStyle}>
+              {VideoGamesInfo["theAudioventure"]["body"]}
+            </Box>
+          </Typography>
+          <iframe
+            title="The Audioventure"
+            src={VideoGamesInfo["theAudioventure"]["linkUrl"]}
+            style={{
+              width: "70vw",
+              height: "50vh",
+              borderStyle: "inset",
+              borderWidth: "0.2vw",
+              marginTop: "1.5%",
+              marginBottom: "2%",
             }}
-          >
-            The Audioventure
-          </Box>
-          <Box
-            sx={{
-              color: "white",
-              fontSize: "1rem",
-              letterSpacing: "0.1rem",
-              wordSpacing: "0.04rem",
-              lineHeight: "1.6rem",
+          />
+          <div
+            style={{
+              display: "flex",
+              width: "70vw",
+              height: "50vh",
               marginTop: "2%",
             }}
           >
-            Check out my latest video game project, a playlist-themed game in
-            which I composed a theme for the places “Beach”, “Party”, and
-            “Through the clouds”.
-          </Box>
-        </Typography>
-        <iframe
-          title="Inline Frame Example"
-          src={"https://the-audioventure.github.io/The-Audioventure/#/Home"}
-          style={{
-            width: "70vw",
-            height: "50vh",
-            borderStyle: "inset",
-            borderWidth: "0.2vw",
-            marginTop: "2%",
-          }}
-        />
+            <div
+              style={{
+                display: "flex",
+                width: "50%",
+                height: "100%",
+              }}
+            >
+              <ReactPlayer
+                url={VideoGamesInfo["soundcloud"]["playerUrl"]}
+                config={{
+                  soundcloud: {
+                    options: {
+                      single_active: false,
+                    },
+                  },
+                }}
+              />
+            </div>
+            <div style={{ width: "50%", flex: 1, margin: "auto" }}>
+              <Caption
+                title={VideoGamesInfo["soundcloud"]["title"]}
+                desc={VideoGamesInfo["soundcloud"]["body"]}
+                linkUrl={VideoGamesInfo["soundcloud"]["linkUrl"]}
+                linkText={VideoGamesInfo["soundcloud"]["linkText"]}
+              />
+            </div>
+          </div>
 
-        <VideoGame
-          imgSrc={GourdGetaway}
-          title="Gourd Getaway"
-          desc="My track is on the last two levels of the game."
-          link="https://elijahcobb.itch.io/gourdgetaway"
-        />
-        <VideoGame
-          imgSrc={Pancakescape}
-          title="Pancakescape"
-          desc="There are three composers on this track, and our tracks play randomly."
-          link="https://caiojmini.itch.io/pancakescape"
-        />
-        <VideoGame
-          imgSrc={Doughmentum}
-          title="Doughmentum"
-          desc="I did the main menu music and all the sfx on this game."
-          link="https://ahrtxv.itch.io/dough-mentum"
-        />
-        <VideoGame
-          imgSrc={BobTheBomber}
-          title="Bob the Bomber"
-          desc="Was responsible for all music and sfx on this game."
-          link="https://restartgame.itch.io/bob-the-bomber"
-        />
-        <VideoGame
-          imgSrc={BoomerangAttack}
-          title="Boomerang attack"
-          desc="I did all the music and sfx on this game, as well as gave most of the ideas to create this game."
-          link="https://devpenguingames.itch.io/boomerang-attack"
-        />
-        <VideoGame
-          imgSrc={LostColors}
-          title="Lost colors"
-          desc="I did all music/sfx."
-          link="https://globalgamejam.org/2021/games/lost-colors-2-0"
-        />
-        <VideoGame
-          imgSrc={IHaveSeenYourDog}
-          title="I have seen your dog"
-          desc="I did music"
-          link="https://v3.globalgamejam.org/2021/games/i-have-seen-your-dog-7"
-        />
-        <br></br>
-      </Stack>
-    </Grid>
-  </div>
-);
+          {VideoGamesInfo
+            ? VideoGamesInfo["games"].map(
+                (entry: {
+                  picUrl: string;
+                  title: string;
+                  body: string;
+                  linkUrl: string;
+                  linkText: string;
+                }) => (
+                  <>
+                    <VideoGame
+                      imgSrc={entry["picUrl"]}
+                      title={entry["title"]}
+                      desc={entry["body"]}
+                      linkUrl={entry["linkUrl"]}
+                      linkText={entry["linkText"]}
+                    />
+                  </>
+                )
+              )
+            : null}
+          <br></br>
+        </Stack>
+      </Grid>
+    </div>
+  );
+};
 
-// /**
-//  *
-//  * @param {{imgSrc: string, title: string, desc: string, link: string}} props
-//  */
-const VideoGame = ({ imgSrc, title, desc, link }) => {
+const VideoGame = (props: {
+  imgSrc: string;
+  title: string;
+  desc: string;
+  linkUrl: string;
+  linkText: string;
+}) => {
+  const { imgSrc, title, desc, linkUrl, linkText } = props;
   return (
     <div
       style={{
@@ -235,61 +243,67 @@ const VideoGame = ({ imgSrc, title, desc, link }) => {
         ></img>
       </div>
       <div style={{ width: "50%", flex: 1, margin: "auto" }}>
-        <Typography
-          component="div"
-          sx={{
-            fontFamily: "Yaldevi",
-            color: "white",
-            flexWrap: "wrap",
-            display: "flex",
-          }}
-        >
-          <Box
-            sx={{
-              fontWeight: "bold",
-              fontSize: "1.5rem",
-              lineHeight: "1rem",
-              color: "white",
-              marginLeft: "10%",
-              width: "100%",
-            }}
-          >
-            {title}
-          </Box>
-          <Box
-            sx={{
-              color: "white",
-              fontSize: "1rem",
-              letterSpacing: "0.1rem",
-              wordSpacing: "0.04rem",
-              lineHeight: "1.6rem",
-              marginLeft: "10%",
-              marginTop: "4vh",
-              width: "100%",
-            }}
-          >
-            {desc}
-          </Box>
-          <Link
-            href={link}
-            sx={{
-              color: "black",
-              fontSize: "1rem",
-              letterSpacing: "0.1rem",
-              wordSpacing: "0.04rem",
-              lineHeight: "1.6rem",
-              marginLeft: "10%",
-              ":hover": { color: "white" },
-              textDecoration: "none",
-              marginTop: "4vh",
-              width: "100%",
-            }}
-          >
-            {link}
-          </Link>
-        </Typography>
+        <Caption
+          title={title}
+          desc={desc}
+          linkUrl={linkUrl}
+          linkText={linkText}
+        />
       </div>
     </div>
+  );
+};
+
+const Caption = (props: {
+  title: string;
+  desc: string;
+  linkUrl: string;
+  linkText: string;
+}) => {
+  const { title, desc, linkUrl, linkText } = props;
+  return (
+    <Typography
+      component="div"
+      sx={{
+        fontFamily: "Yaldevi",
+        color: "white",
+        flexWrap: "wrap",
+        display: "flex",
+      }}
+    >
+      <Box
+        sx={{
+          ...titleStyle,
+          marginLeft: "10%",
+        }}
+      >
+        {title}
+      </Box>
+      <Box
+        sx={{
+          ...bodyStyle,
+          marginLeft: "10%",
+          marginTop: "4vh",
+          width: "100%",
+        }}
+      >
+        {desc}
+      </Box>
+      <Link
+        href={linkUrl}
+        sx={{
+          ...bodyStyle,
+          color: "black",
+          marginLeft: "10%",
+          ":hover": { color: "white" },
+          textDecoration: "none",
+          marginTop: "4vh",
+          width: "100%",
+        }}
+      >
+        {linkText}
+      </Link>{" "}
+    </Typography>
   );
 };
 
@@ -297,5 +311,6 @@ VideoGame.propTypes = {
   imgSrc: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   desc: PropTypes.string.isRequired,
-  link: PropTypes.string.isRequired,
+  linkUrl: PropTypes.string.isRequired,
+  linkText: PropTypes.string.isRequired,
 };

@@ -1,0 +1,74 @@
+[main]
+title = '''
+Biography
+'''
+backgroundPic = '''
+https://michellelugomusic.github.io/MichelleLugoMusicResources/biographypic_cropped.jpeg
+'''
+profilePic = '''
+https://michellelugomusic.github.io/MichelleLugoMusicResources/profpicsmall.jpeg
+'''
+text = '''
+## Hi!
+
+My name is **Michelle Lugo**, and I'm a Berklee College of Music
+alumni. My major was composition, arranging and production, and I
+have a minor in music technology. I was always interested in music
+since I was four years when I begged my mother to buy me a piano.
+Since then, I've learned to play classical piano at a conservatory
+and picked up other instruments like guitar, bass and voice.
+Through my experience in music, I wanted to start composing and
+arranging, and I started that at 15. When got into Berklee, I knew
+that I wanted to expand my creativity to make music and be able to
+learn different stuff with it like recording, mixing and
+arranging. I have made arrangements for big shows at Berklee, and
+I want to have different projects involving creating for other
+people and for myself.
+
+## Why do I love music?
+
+I love music because it’s more than just a passion; it’s something
+that defines me. It brings out my creative side, and it’s
+something I don’t get tired of. Music makes the world a better
+place, and I intend to make the world a better place through
+music.
+
+## Portfolio…
+'''
+
+[portfolio.link]
+text = '''
+Go to my portfolio
+'''
+url = '''
+film_music
+'''
+
+[contact]
+text = '''
+If you have any questions or would like to get in touch, you can reach me via
+'''
+
+[[contact.links]]
+text = '''
+Email
+'''
+url = '''
+mailto:cmlugo27@gmail.com
+'''
+
+[[contact.links]]
+text = '''
+Facebook
+'''
+url = '''
+https://www.facebook.com/BoriPianist/
+'''
+
+[[contact.links]]
+text = '''
+Instagram
+'''
+url = '''
+https://www.instagram.com/michellelugomusic/
+'''

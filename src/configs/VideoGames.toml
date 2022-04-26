@@ -9,140 +9,76 @@ title = "The Audioventure"
 body = '''
 Check out my latest video game project, a playlist-themed game in which I composed a theme for the places “Beach”, “Party”, and “Through the clouds”.
 '''
-linkUrl = '''
-https://the-audioventure.github.io/The-Audioventure/#/Home
-'''
+linkUrl = "https://the-audioventure.github.io/The-Audioventure/#/Home"
 
 [soundcloud]
 title = "Best tracks"
 body = '''
 My top 5 tracks hosted on soundcloud
 '''
-playerUrl = '''
-https://soundcloud.com/michelle-lugo-386819351/sets/best-tracks?color=#FFFFFF
-'''
-linkText = '''
-https://soundcloud.com/michelle-lugo-386819351/sets/best-tracks
-'''
-linkUrl = '''
-https://soundcloud.com/michelle-lugo-386819351/sets/best-tracks
-'''
+playerUrl = "https://soundcloud.com/michelle-lugo-386819351/sets/best-tracks?color=#FFFFFF"
+linkText = "https://soundcloud.com/michelle-lugo-386819351/sets/best-tracks"
+linkUrl = "https://soundcloud.com/michelle-lugo-386819351/sets/best-tracks"
 
 [[games]]
-title = '''
-Gourd Getaway
-'''
+title = "Gourd Getaway"
 body = '''
 My track is on the last two levels of the game.
 '''
-linkText = '''
-https://elijahcobb.itch.io/gourdgetaway
-'''
-linkUrl = '''
-https://elijahcobb.itch.io/gourdgetaway
-'''
-picUrl = '''
-https://michellelugomusic.github.io/MichelleLugoMusicResources/GourdGetaway.png
-'''
+linkText = "https://elijahcobb.itch.io/gourdgetaway"
+linkUrl = "https://elijahcobb.itch.io/gourdgetaway"
+picUrl = "https://michellelugomusic.github.io/MichelleLugoMusicResources/GourdGetaway.png"
 
 [[games]]
-title = '''
-Pancakescape
-'''
+title = "Pancakescape"
 body = '''
 There are three composers on this track, and our tracks play randomly.
 '''
-linkText = '''
-https://caiojmini.itch.io/pancakescape
-'''
-linkUrl = '''
-https://caiojmini.itch.io/pancakescape
-'''
-picUrl = '''
-https://michellelugomusic.github.io/MichelleLugoMusicResources/Pancakescape.png
-'''
+linkText = "https://caiojmini.itch.io/pancakescape"
+linkUrl = "https://caiojmini.itch.io/pancakescape"
+picUrl = "https://michellelugomusic.github.io/MichelleLugoMusicResources/Pancakescape.png"
 
 [[games]]
-title = '''
-Doughmentum
-'''
+title = "Doughmentum"
 body = '''
 I did the main menu music and all the sfx on this game.
 '''
-linkText = '''
-https://ahrtxv.itch.io/dough-mentum
-'''
-linkUrl = '''
-https://ahrtxv.itch.io/dough-mentum
-'''
-picUrl = '''
-https://michellelugomusic.github.io/MichelleLugoMusicResources/Doughmentum.png
-'''
+linkText = "https://ahrtxv.itch.io/dough-mentum"
+linkUrl = "https://ahrtxv.itch.io/dough-mentum"
+picUrl = "https://michellelugomusic.github.io/MichelleLugoMusicResources/Doughmentum.png"
 
 [[games]]
-title = '''
-Bob the Bomber
-'''
+title = "Bob the Bomber"
 body = '''
 Was responsible for all music and sfx on this game.
 '''
-linkText = '''
-https://restartgame.itch.io/bob-the-bomber
-'''
-linkUrl = '''
-https://restartgame.itch.io/bob-the-bomber
-'''
-picUrl = '''
-https://michellelugomusic.github.io/MichelleLugoMusicResources/BobTheBomber.png
-'''
+linkText = "https://restartgame.itch.io/bob-the-bomber"
+linkUrl = "https://restartgame.itch.io/bob-the-bomber"
+picUrl = "https://michellelugomusic.github.io/MichelleLugoMusicResources/BobTheBomber.png"
 
 [[games]]
-title = '''
-Boomerang attack
-'''
+title = "Boomerang attack"
 body = '''
 I did all the music and sfx on this game, as well as gave most of the ideas to create this game.
 '''
-linkText = '''
-https://devpenguingames.itch.io/boomerang-attack
-'''
-linkUrl = '''
-https://devpenguingames.itch.io/boomerang-attack
-'''
-picUrl = '''
-https://michellelugomusic.github.io/MichelleLugoMusicResources/BoomerangAttack.png
-'''
+linkText = "https://devpenguingames.itch.io/boomerang-attack"
+linkUrl = "https://devpenguingames.itch.io/boomerang-attack"
+picUrl = "https://michellelugomusic.github.io/MichelleLugoMusicResources/BoomerangAttack.png"
 
 [[games]]
-title = '''
-Lost colors
-'''
+title = "Lost colors"
 body = '''
 I did all music/sfx.
 '''
-linkText = '''
-https://globalgamejam.org/2021/games/lost-colors-2-0
-'''
-linkUrl = '''
-https://globalgamejam.org/2021/games/lost-colors-2-0
-'''
-picUrl = '''
-https://michellelugomusic.github.io/MichelleLugoMusicResources/LostColors.png
-'''
+linkText = "https://globalgamejam.org/2021/games/lost-colors-2-0"
+linkUrl = "https://globalgamejam.org/2021/games/lost-colors-2-0"
+picUrl = "https://michellelugomusic.github.io/MichelleLugoMusicResources/LostColors.png"
 
 [[games]]
-title = '''
-I have seen your dog
-'''
+title = "I have seen your dog"
 body = '''
 I did music
 '''
-linkText = '''
-https://v3.globalgamejam.org/2021/games/i-have-seen-your-dog-7
-'''
-linkUrl = '''
-https://v3.globalgamejam.org/2021/games/i-have-seen-your-dog-7
-'''
-picUrl = '''
-https://michellelugomusic.github.io/MichelleLugoMusicResources/IHaveSeenYourDog.png
-'''
+linkText = "https://v3.globalgamejam.org/2021/games/i-have-seen-your-dog-7"
+linkUrl = "https://v3.globalgamejam.org/2021/games/i-have-seen-your-dog-7"
+picUrl = "https://michellelugomusic.github.io/MichelleLugoMusicResources/IHaveSeenYourDog.png"

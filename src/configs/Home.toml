@@ -1,10 +1,4 @@
 [main]
-backgroundPic = '''
-https://michellelugomusic.github.io/MichelleLugoMusicResources/homepic_cropped.jpeg
-'''
-name = '''
-Michelle Lugo
-'''
-title = '''
-Composer | Arranger | Producer
-'''
+backgroundPic = "https://michellelugomusic.github.io/MichelleLugoMusicResources/homepic_cropped.jpeg"
+name = "Michelle Lugo"
+title = "Composer | Arranger | Producer"

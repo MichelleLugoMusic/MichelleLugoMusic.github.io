@@ -1,13 +1,7 @@
 [main]
-title = '''
-Biography
-'''
-backgroundPic = '''
-https://michellelugomusic.github.io/MichelleLugoMusicResources/biographypic_cropped.jpeg
-'''
-profilePic = '''
-https://michellelugomusic.github.io/MichelleLugoMusicResources/profpicsmall.jpeg
-'''
+title = "Biography"
+backgroundPic = "https://michellelugomusic.github.io/MichelleLugoMusicResources/biographypic_cropped.jpeg"
+profilePic = "https://michellelugomusic.github.io/MichelleLugoMusicResources/profpicsmall.jpeg"
 text = '''
 ## Hi!
 
@@ -37,12 +31,8 @@ music.
 '''
 
 [portfolio.link]
-text = '''
-Go to my portfolio
-'''
-url = '''
-film_music
-'''
+text = "Go to my portfolio"
+url = "film_music"
 
 [contact]
 text = '''
@@ -50,25 +40,13 @@ If you have any questions or would like to get in touch, you can reach me via
 '''
 
 [[contact.links]]
-text = '''
-Email
-'''
-url = '''
-mailto:cmlugo27@gmail.com
-'''
+text = "Email"
+url = "mailto:cmlugo27@gmail.com"
 
 [[contact.links]]
-text = '''
-Facebook
-'''
-url = '''
-https://www.facebook.com/BoriPianist/
-'''
+text = "Facebook"
+url = "https://www.facebook.com/BoriPianist/"
 
 [[contact.links]]
-text = '''
-Instagram
-'''
-url = '''
-https://www.instagram.com/michellelugomusic/
-'''
+text = "Instagram"
+url = "https://www.instagram.com/michellelugomusic/"

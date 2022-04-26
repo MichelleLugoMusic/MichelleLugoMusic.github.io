@@ -1,60 +1,62 @@
-import { Grid, Typography, Stack } from "@mui/material";
-import background from "../assets/images/michellelugomusic_widecrop3.jpeg";
+import { Grid } from "@mui/material";
 import Header from "../components/Header";
+import HomeToml from "../configs/Home.toml?raw";
+import toml from "toml";
 
-const Home = () => (
-  <Grid
-    style={{
-      backgroundImage: `url(${background})`,
-      backgroundSize: "auto 100%",
-      backgroundPosition: "center",
-      width: "100vw",
-      height: "100vh",
-      backgroundRepeat: "no-repeat",
-      backgroundColor: "black",
-    }}
-    display="flex"
-    flexDirection="column"
-  >
-    <Header />
-
-    <div
+const Home = () => {
+  const HomeEntries = toml.parse(HomeToml);
+  return (
+    <Grid
       style={{
-        flex: 0.55,
-        backgroundColor: "clear",
-        display: "flex",
-        alignItems: "center",
-        marginTop: "15%",
-        flexDirection: "row",
-        justifyContent: "center",
+        backgroundImage: `url(${HomeEntries["main"]["backgroundPic"]})`,
+        backgroundSize: "auto 100%",
+        backgroundPosition: "center",
+        width: "100vw",
+        height: "100vh",
+        backgroundRepeat: "no-repeat",
+        backgroundColor: "black",
       }}
+      display="flex"
+      flexDirection="column"
     >
+      <Header />
+
       <div
         style={{
-          textAlign: "center",
-          fontFamily: "Merienda",
-          color: "white",
-          fontSize: "6vw",
-          lineHeight: "10vh",
-          marginRight: "3vw",
+          flex: 0.55,
+          backgroundColor: "clear",
+          display: "flex",
+          alignItems: "center",
+          marginTop: "15%",
+          flexDirection: "row",
+          justifyContent: "center",
         }}
       >
-        Michelle Lugo
+        <div
+          style={{
+            textAlign: "center",
+            fontFamily: "Merienda",
+            color: "white",
+            fontSize: "6vw",
+            lineHeight: "10vh",
+            marginRight: "3vw",
+          }}
+        >
+          {HomeEntries["main"]["name"]}
+        </div>
+        <div
+          style={{
+            fontFamily: "Yaldevi",
+            color: "white",
+            fontSize: "2vw",
+            marginTop: "1vw",
+          }}
+        >
+          {HomeEntries["main"]["title"]}
+        </div>
       </div>
-      <div
-        style={{
-          // alignSelf: "center",
-          // justifyContent: "center",
-          fontFamily: "Yaldevi",
-          color: "white",
-          fontSize: "2vw",
-          marginTop: "1vw",
-        }}
-      >
-        Composer | Arranger | Producer
-      </div>
-    </div>
-  </Grid>
-);
+    </Grid>
+  );
+};
 
 export default Home;

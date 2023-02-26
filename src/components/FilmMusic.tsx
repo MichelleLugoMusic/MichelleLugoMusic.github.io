@@ -10,7 +10,7 @@ const maintitlestyle: React.CSSProperties = {
   lineHeight: "10vh",
 };
 
-export const FilmMusic = () => {
+export const FilmAudio = () => {
   const theaterEntries = toml.parse(FilmMusicToml);
   console.log(theaterEntries);
   return (
